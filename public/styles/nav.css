@@ -4,19 +4,17 @@ nav {
   color:#FFFFFF;
   background-color: #4056A1; 
   padding: 0 1.5em;
+  font-family: "Bungee", sans-serif;
   display: flex;
   align-items: center;
+  justify-content: space-between
 }
-.rightNav {
-  margin-left: auto;
+.navTweetButton {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.leftNav {
-  font-family: "Bungee", sans-serif;
-}
 
 .fa-solid {
   color: red;
