@@ -1,0 +1,20 @@
+{
+  "name": "tweeter",
+  "version": "1.0.0",
+  "description": "A twitter clone by Lighthouse Labs for web bootcamp students to learn front-end dev skillz",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.js",
+    "local": "nodemon server/index.js"
+  },
+  "author": "Lighthouse Labs",
+  "license": "ISC",
+  "dependencies": {
+    "chance": "^1.1.12",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
