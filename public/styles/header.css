@@ -1,0 +1,20 @@
+header {
+  width: 100vw;
+  color:#FFFFFF;
+  background-color: goldenrod; 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("/images/asfalt-light.png");
+}
+
+.profileImage {
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.profileName {
+  justify-content: center;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 200;
+}
