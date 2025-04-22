@@ -22,6 +22,7 @@
 .new-tweet textarea {
   width: 100%;
   display: flex;
+  padding: 5px;
   justify-content: flex-start;
   border: none;
   border-bottom: 4px solid #545149;
@@ -44,6 +45,15 @@
   color:#FFFFFF;
   background-color: #4056A1; 
   border: 1px solid #545149;
+}
+
+.new-tweet button:hover {
+  color:#FFFFFF;
+  background-color: #4d65b3; 
+  cursor: pointer;
+  transition: all 0.2s ease;
+  transform: scale(1.03);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .counter {
