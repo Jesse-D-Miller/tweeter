@@ -56,6 +56,10 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+.counter.negative {
+  color: red;
+}
+
 .counter {
   color: #545149;
 }
