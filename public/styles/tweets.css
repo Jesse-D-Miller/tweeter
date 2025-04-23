@@ -28,4 +28,14 @@ article.tweet footer {
   border-top: solid #545149;
   justify-content: space-between;
   font-size: small;
+  align-items: center;
+}
+
+article.tweet footer .interaction-buttons i {
+  padding-left: 5px;
+  color: #4056A1; 
+}
+
+article.tweet footer .interaction-buttons i:hover {
+  color: goldenrod;
 }

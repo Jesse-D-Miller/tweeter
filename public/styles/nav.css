@@ -26,6 +26,6 @@ nav {
   font-family: "Bungee", sans-serif;
 }
 
-.fa-solid {
+nav div .fa-solid {
   color: red;
 }
