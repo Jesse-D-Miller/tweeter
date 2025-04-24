@@ -15,7 +15,6 @@ $(document).ready(() => {
 
     //saves the tweet (serialised) into a variable
     const formData = $(event.target).serialize();
-    console.log("Serialized form data:", formData);
 
     //tweet validation goes here. this function returns false if input is invalid and then terminates exicution of tweet without clearing the form
     if(!validateTweetInput()) {
@@ -31,10 +30,11 @@ $(document).ready(() => {
     })
     //promise with a response from the server and a form reset or an error 
     .then((response) => {
-      console.log("Server responded:", response);
+      console.log("Server responded (POST):", response);
       // reset form
       $(event.target).trigger("reset");
       $(".counter").text(140);
+      loadTweets();
     })
     .catch((err) => {
       console.error("AJAX error:", err);
@@ -50,7 +50,7 @@ $(document).ready(() => {
     })
     //promise with a response from the server and a form reset or an error 
     .then((response) => {
-      console.log("Server responded:", response);
+      console.log("Server responded (GET):", response);
       // reset form
       renderTweets(response);
     })
