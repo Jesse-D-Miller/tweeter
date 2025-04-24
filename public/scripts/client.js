@@ -17,6 +17,16 @@ $(document).ready(() => {
     const formData = $(event.target).serialize();
     console.log("Serialized form data:", formData);
 
+    //tweet validation goes here
+    let tweetContent = $('.new-tweet textarea').val();
+    if (tweetContent.length > 140) {
+      alert("Character limit exceeded");
+      return;
+    } else if (tweetContent === null || tweetContent === "") {
+      alert("Cannot submit a blank form")
+      return;
+    }
+
     //idk what ajax does and how it invokes an implicit promise
     //note: i kind of get this now
     $.ajax({
@@ -57,9 +67,7 @@ $(document).ready(() => {
   loadTweets();
 });
 
-// loops through tweets
-// calls createTweetElement for each tweet
-// takes return value and appends it to the tweets container
+//loops through tweets, calls createTweetElement for each tweet, takes return value and appends it to the tweets container
 const renderTweets = function (tweets) {
   //empty the container before appending
   $(".tweets-container").empty();

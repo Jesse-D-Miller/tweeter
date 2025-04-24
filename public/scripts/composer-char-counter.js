@@ -3,7 +3,6 @@ $(document).ready(function() {
 
   $('.new-tweet textarea').on('input', function() {
     const remainingCharacterCount = 140 - $(this).val().length;
-    console.log(remainingCharacterCount);
     const counter = $(this).closest('form').find('.counter')
 
     counter.text(remainingCharacterCount);
