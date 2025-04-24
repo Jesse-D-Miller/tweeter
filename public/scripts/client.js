@@ -17,8 +17,10 @@ $(document).ready(() => {
     const formData = $(event.target).serialize();
     console.log("Serialized form data:", formData);
 
-    //tweet validation goes here
-    validateTweetInput();
+    //tweet validation goes here. this function returns false if input is invalid and then terminates exicution of tweet without clearing the form
+    if(!validateTweetInput()) {
+      return;
+    }
 
     //idk what ajax does and how it invokes an implicit promise
     //note: i kind of get this now
@@ -108,9 +110,10 @@ const validateTweetInput = () => {
   let tweetContent = $('.new-tweet textarea').val().trim();
   if (tweetContent.length > 140) {
     alert("Character limit exceeded");
-    return;
+    return false;
   } else if (tweetContent === null || tweetContent === "") {
     alert("Cannot submit a blank form")
-    return;
+    return false;
   }
+  return true;
 }
