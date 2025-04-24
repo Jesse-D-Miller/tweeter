@@ -18,14 +18,7 @@ $(document).ready(() => {
     console.log("Serialized form data:", formData);
 
     //tweet validation goes here
-    let tweetContent = $('.new-tweet textarea').val();
-    if (tweetContent.length > 140) {
-      alert("Character limit exceeded");
-      return;
-    } else if (tweetContent === null || tweetContent === "") {
-      alert("Cannot submit a blank form")
-      return;
-    }
+    validateTweetInput();
 
     //idk what ajax does and how it invokes an implicit promise
     //note: i kind of get this now
@@ -34,18 +27,18 @@ $(document).ready(() => {
       url: "http://localhost:8080/api/tweets",
       data: formData,
     })
-      //promise with a response from the server and a form reset or an error 
-      .then((response) => {
-        console.log("Server responded:", response);
-        // reset form
-        $(event.target).trigger("reset");
-        $(".counter").text(140);
-      })
-      .catch((err) => {
-        console.error("AJAX error:", err);
-      });
+    //promise with a response from the server and a form reset or an error 
+    .then((response) => {
+      console.log("Server responded:", response);
+      // reset form
+      $(event.target).trigger("reset");
+      $(".counter").text(140);
+    })
+    .catch((err) => {
+      console.error("AJAX error:", err);
+    });
   });
-
+  
   const loadTweets = () => {
     //ajax/jquery get request to get tweet data from /api/tweets
     $.ajax({
@@ -53,17 +46,17 @@ $(document).ready(() => {
       url: "http://localhost:8080/api/tweets",
       // data: user,
     })
-      //promise with a response from the server and a form reset or an error 
-      .then((response) => {
-        console.log("Server responded:", response);
-        // reset form
-        renderTweets(response);
-      })
-      .catch((err) => {
-        console.error("AJAX error:", err);
-      });
+    //promise with a response from the server and a form reset or an error 
+    .then((response) => {
+      console.log("Server responded:", response);
+      // reset form
+      renderTweets(response);
+    })
+    .catch((err) => {
+      console.error("AJAX error:", err);
+    });
   }
-
+  
   loadTweets();
 });
 
@@ -71,7 +64,7 @@ $(document).ready(() => {
 const renderTweets = function (tweets) {
   //empty the container before appending
   $(".tweets-container").empty();
-
+  
   for (const tweet of tweets) {
     const tweetElement = createTweetElement(tweet);
     $(".tweets-container").prepend(tweetElement);
@@ -80,9 +73,9 @@ const renderTweets = function (tweets) {
 
 const createTweetElement = (tweet) => {
   const { user, content, created_at } = tweet;
-
+  
   const $article = $("<article>").addClass("tweet");
-
+  
   // header
   const $header = $("<header>");
   const $headerDiv = $("<div>");
@@ -91,10 +84,10 @@ const createTweetElement = (tweet) => {
   const $userHandle = $("<span>").text(user.handle).addClass("handle");
   $headerDiv.append($img, $username);
   $header.append($headerDiv, $userHandle);
-
+  
   // content
   const $p = $("<p>").text(content.text);
-
+  
   // footer
   const $footer = $("<footer>");
   const $postedDate = $("<span>").text(timeago.format(created_at));
@@ -104,9 +97,20 @@ const createTweetElement = (tweet) => {
   const $heartIcon = $("<i>").addClass("fa-solid fa-heart");
   $iconsDiv.append($flagIcon, $retweetIcon, $heartIcon);
   $footer.append($postedDate, $iconsDiv);
-
+  
   //assemble tweet
   $article.append($header, $p, $footer);
-
+  
   return $article;
+}
+
+const validateTweetInput = () => {
+  let tweetContent = $('.new-tweet textarea').val().trim();
+  if (tweetContent.length > 140) {
+    alert("Character limit exceeded");
+    return;
+  } else if (tweetContent === null || tweetContent === "") {
+    alert("Cannot submit a blank form")
+    return;
+  }
 }
