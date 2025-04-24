@@ -7,6 +7,18 @@
   align-items: center;
 }
 
+.new-tweet h2 {
+  border-bottom: 4px solid #545149;
+  margin: 0.5em 0;
+}
+
+.new-tweet .error-message {
+  margin: 0.1em;
+  color: red;
+  border: solid red 0.2em;
+  padding: 0.1em;
+}
+
 .new-tweet-form {
   width: 100%;
 
@@ -18,12 +30,12 @@
 
 .new-tweet-form textarea {
   width: 100%;
-  padding: 1em 0;
+  padding: 0.4em 0;
   border: none;
   border-bottom: 4px solid #545149;
   background: transparent;
   color: black;
-  font-size: 1.2em;
+  font-size: 1em;
   resize: none;
   outline: none;
 

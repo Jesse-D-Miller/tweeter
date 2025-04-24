@@ -17,7 +17,8 @@ $(document).ready(() => {
     const formData = $(event.target).serialize();
 
     //tweet validation goes here. this function returns false if input is invalid and then terminates exicution of tweet without clearing the form
-    if(!validateTweetInput()) {
+    $(".new-tweet .error-message").slideUp(); //hides error when submitting new error
+    if (!validateTweetInput()) {
       return;
     }
 
@@ -28,19 +29,19 @@ $(document).ready(() => {
       url: "/api/tweets",
       data: formData,
     })
-    //promise with a response from the server and a form reset or an error 
-    .then((response) => {
-      console.log("Server responded (POST):", response);
-      // reset form
-      $(event.target).trigger("reset");
-      $(".counter").text(140);
-      loadTweets();
-    })
-    .catch((err) => {
-      console.error("AJAX error:", err);
-    });
+      //promise with a response from the server and a form reset or an error 
+      .then((response) => {
+        console.log("Server responded (POST):", response);
+        // reset form
+        $(event.target).trigger("reset");
+        $(".counter").text(140);
+        loadTweets();
+      })
+      .catch((err) => {
+        console.error("AJAX error:", err);
+      });
   });
-  
+
   const loadTweets = () => {
     //ajax/jquery get request to get tweet data from /api/tweets
     $.ajax({
@@ -48,17 +49,17 @@ $(document).ready(() => {
       url: "/api/tweets",
       // data: user,
     })
-    //promise with a response from the server and a form reset or an error 
-    .then((response) => {
-      console.log("Server responded (GET):", response);
-      // reset form
-      renderTweets(response);
-    })
-    .catch((err) => {
-      console.error("AJAX error:", err);
-    });
+      //promise with a response from the server and a form reset or an error 
+      .then((response) => {
+        console.log("Server responded (GET):", response);
+        // reset form
+        renderTweets(response);
+      })
+      .catch((err) => {
+        console.error("AJAX error:", err);
+      });
   }
-  
+
   loadTweets();
 });
 
@@ -66,7 +67,7 @@ $(document).ready(() => {
 const renderTweets = function (tweets) {
   //empty the container before appending
   $(".tweets-container").empty();
-  
+
   for (const tweet of tweets) {
     const tweetElement = createTweetElement(tweet);
     $(".tweets-container").prepend(tweetElement);
@@ -75,9 +76,9 @@ const renderTweets = function (tweets) {
 
 const createTweetElement = (tweet) => {
   const { user, content, created_at } = tweet;
-  
+
   const $article = $("<article>").addClass("tweet");
-  
+
   // header
   const $header = $("<header>");
   const $headerDiv = $("<div>");
@@ -86,10 +87,10 @@ const createTweetElement = (tweet) => {
   const $userHandle = $("<span>").text(user.handle).addClass("handle");
   $headerDiv.append($img, $username);
   $header.append($headerDiv, $userHandle);
-  
+
   // content
   const $p = $("<p>").text(content.text);
-  
+
   // footer
   const $footer = $("<footer>");
   const $postedDate = $("<span>").text(timeago.format(created_at));
@@ -99,20 +100,22 @@ const createTweetElement = (tweet) => {
   const $heartIcon = $("<i>").addClass("fa-solid fa-heart");
   $iconsDiv.append($flagIcon, $retweetIcon, $heartIcon);
   $footer.append($postedDate, $iconsDiv);
-  
+
   //assemble tweet
   $article.append($header, $p, $footer);
-  
+
   return $article;
 }
 
 const validateTweetInput = () => {
-  let tweetContent = $('.new-tweet textarea').val().trim();
+  const tweetContent = $('.new-tweet textarea').val().trim();
+  const $error = $(".new-tweet .error-message");
+
   if (tweetContent.length > 140) {
-    alert("Character limit exceeded");
+    $error.html('<i class="fa-solid fa-triangle-exclamation"></i> You have exceeded the character count <i class="fa-solid fa-triangle-exclamation"></i>').slideDown();
     return false;
   } else if (tweetContent === null || tweetContent === "") {
-    alert("Cannot submit a blank form")
+    $error.html('<i class="fa-solid fa-triangle-exclamation"></i> You cannot submit a blank tweet <i class="fa-solid fa-triangle-exclamation"></i>').slideDown();
     return false;
   }
   return true;
