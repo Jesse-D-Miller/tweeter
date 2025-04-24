@@ -25,7 +25,7 @@ $(document).ready(() => {
     //note: i kind of get this now
     $.ajax({
       method: "POST",
-      url: "http://localhost:8080/api/tweets",
+      url: "/api/tweets",
       data: formData,
     })
     //promise with a response from the server and a form reset or an error 
@@ -45,7 +45,7 @@ $(document).ready(() => {
     //ajax/jquery get request to get tweet data from /api/tweets
     $.ajax({
       method: "GET",
-      url: "http://localhost:8080/api/tweets",
+      url: "/api/tweets",
       // data: user,
     })
     //promise with a response from the server and a form reset or an error 
