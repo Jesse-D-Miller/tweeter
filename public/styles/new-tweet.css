@@ -1,53 +1,52 @@
 .new-tweet {
-  display: flex;
   width: 100%;
+
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.new-tweet form {
-  display: flex;
+.new-tweet-form {
   width: 100%;
+
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.new-tweet label {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
 
-.new-tweet textarea {
+.new-tweet-form textarea {
   width: 100%;
-  display: flex;
-  padding: 5px;
-  justify-content: flex-start;
+  padding: 1em 0;
   border: none;
   border-bottom: 4px solid #545149;
   background: transparent;
   color: black;
-  height: 40px;
-  font-size: medium;
+  font-size: 1.2em;
+  resize: none;
+  outline: none;
 
+  display: flex;
+  justify-content: flex-start;
 }
 
-.new-tweet div {
+.new-tweet-form-submit {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
   padding-top: 15px;
   font-family: "Bungee", sans-serif;
+
+  display: flex;
+  justify-content: space-between;
 }
 
-.new-tweet button {
+.new-tweet-form-submit button {
   color:#FFFFFF;
   background-color: #4056A1; 
   border: 1px solid #545149;
 }
 
-.new-tweet button:hover {
+.new-tweet-form-submit button:hover {
   color:#FFFFFF;
   background-color: #4d65b3; 
   cursor: pointer;

@@ -19,7 +19,6 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans 3', sans-serif;
-  padding-top: 120px;
 }
 
 
@@ -29,13 +28,7 @@ body {
 
 
 main {
-  display: flex;
   padding: 1em;
   width: 90%;
-  margin: auto;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: inherit;
-
+  margin: 1em auto;
 }

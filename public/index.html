@@ -8,18 +8,16 @@
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!--- google fonts -->
+  <!--- External fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
     rel="stylesheet">
-
-  <!--- font awesome icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -30,63 +28,67 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  
+
   <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script type="text/javascript" src="/scripts/client.js"></script>
 
 </head>
 
 <body>
   <!-- Top nav bar (fixed) -->
-  <nav>
-    <span class=navLogo>tweeter</span>
-    <div class="navTweetButton">
-      <span class=rightText><strong>write</strong> a new tweet </span>
+  <nav class="navbar">
+    <span class=navbar-logo>tweeter</span>
+    <div class="navbar-menu">
+      <span><strong>Write</strong> a new tweet </span>
       <i class="fa-solid fa-angles-down"></i>
     </div>
   </nav>
 
-<header class="profile-header">
-  <div class="profileImage">
-    <img src="/images/profile-hex.png">
-  </div>
-  <br>
-  <div class="profileName">
-    <h2 class="profileName">Your Name</h2>
-  </div>
-</header>
+  <!-- header -->
+  <header class="header">
+    <div class="header-img">
+      <img src="/images/profile-hex.png">
+    </div>
+    <div class="header-username">
+      <p><b>Jesse</b> Miller</p>
+    </div>
+  </header>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
+    <!-- new tweet form section -->
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form action="/api/tweets" method="post">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text" required></textarea>
-        <div>
+      <form id="new-tweet-form" class="new-tweet-form">
+        <textarea name="text" id="tweet-text" required placeholder="What are humming about?"></textarea>
+        <div class="new-tweet-form-submit">
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
-    <div>
+    <!-- tweets container -->
+    <section class="tweets-container">
       <article class="tweet">
         <header>
-          <p>name and avatar</p>
-          <p class="handle">@user_handle</p>
+          <div>
+            <img src="/images/profile-hex.png" alt="avatar image">
+            <span>name</span>
+          </div>
+          <span class="handle">@user_handle</span>
         </header>
         <p>Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan</p>
         <footer>
-          <p>posted date</p>
-          <div class="interaction-buttons">
+          <span>posted date</span>
+          <div>
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
             <i class="fa-solid fa-heart"></i>
           </div>
         </footer>
       </article>
-    </div>
+    </section>
   </main>
 </body>
 

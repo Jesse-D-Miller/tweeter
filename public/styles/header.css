@@ -1,20 +1,23 @@
-.profile-header {
+.header {
   width: 100vw;
   color:#FFFFFF;
   background-color: goldenrod; 
+  background-image: url("/images/asfalt-light.png");
+  padding-top: 6em;
+
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: url("/images/asfalt-light.png");
 }
 
-.profileImage {
-  justify-content: center;
-  padding-top: 10px;
+.header-img {
+  width: 200px;
 }
 
-.profileName {
-  justify-content: center;
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 200;
+.header-img img {
+  width: 100%;
+}
+
+.header-username {
+  font-size: 1.5em;
 }
