@@ -34,7 +34,7 @@ main {
   width: 90%;
   padding: 1em;
   margin: 0 auto;
-  max-width: 1000px;  /* or whatever limit you want */
+  max-width: 1000px;
 }
 
 /* small mobile screen styles */
