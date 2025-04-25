@@ -1,11 +1,11 @@
 .navbar {
   height: 120px;
   width: 100vw;
-  color:#FFFFFF;
-  background-color: #4056A1; 
+  color: #FFFFFF;
+  background-color: #4056A1;
   padding: 0 1.5em;
 
-  
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,7 +15,7 @@
 }
 
 .navbar-logo {
-  font-size: 1.5em; 
+  font-size: 1.5em;
   font-family: "Bungee", sans-serif;
 }
 
@@ -26,11 +26,14 @@
 }
 
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
-    transform: translateY(-6px); 
+    transform: translateY(-6px);
   }
 }
 
@@ -54,6 +57,7 @@
   .navbar-menu span {
     display: none;
   }
+
   .navbar-menu i {
     font-size: 2em;
   }

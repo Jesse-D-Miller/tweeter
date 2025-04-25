@@ -56,14 +56,14 @@
 }
 
 .new-tweet-form-submit button {
-  color:#FFFFFF;
-  background-color: #4056A1; 
+  color: #FFFFFF;
+  background-color: #4056A1;
   border: 1px solid #545149;
 }
 
 .new-tweet-form-submit button:hover {
-  color:#FFFFFF;
-  background-color: #4d65b3; 
+  color: #FFFFFF;
+  background-color: #4d65b3;
   cursor: pointer;
   transition: all 0.2s ease;
   transform: scale(1.03);

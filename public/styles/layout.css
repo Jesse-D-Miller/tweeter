@@ -6,7 +6,10 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -36,7 +39,7 @@ main {
 /* small mobile screen styles */
 @media only screen and (max-width: 500px) {
   main {
-    padding: .25em; 
+    padding: .25em;
   }
 }
 
@@ -46,9 +49,10 @@ main {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-  } 
+  }
 
   main {
-    margin-left: calc(250px + 2em); /* to offset the fixed header */
+    margin-left: calc(250px + 2em);
+    /* to offset the fixed header */
   }
 }

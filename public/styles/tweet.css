@@ -12,7 +12,7 @@ article.tweet:hover {
 
 article.tweet header {
   font-weight: lighter;
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,11 +46,11 @@ article.tweet footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}  
+}
 
 article.tweet footer div i {
   padding-left: 5px;
-  color: #4056A1; 
+  color: #4056A1;
 }
 
 article.tweet footer div i:hover {

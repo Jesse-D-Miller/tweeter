@@ -1,7 +1,7 @@
 .header {
   width: 100vw;
-  color:#FFFFFF;
-  background-color: goldenrod; 
+  color: #FFFFFF;
+  background-color: goldenrod;
   background-image: url("/images/asfalt-light.png");
   padding-top: 6em;
 
@@ -37,7 +37,8 @@
     top: 175px;
     left: 1em;
     width: 250px;
-    height: calc(100vh - 175px - 1em); /* full screen height minus top and bottom gaps */
+    height: calc(100vh - 175px - 1em);
+    /* full screen height minus top and bottom gaps */
     padding-top: 24px;
     overflow-y: auto;
     box-sizing: border-box;
