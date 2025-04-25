@@ -34,6 +34,7 @@ main {
   width: 90%;
   padding: 1em;
   margin: 0 auto;
+  max-width: 1000px;  /* or whatever limit you want */
 }
 
 /* small mobile screen styles */
@@ -53,6 +54,12 @@ main {
 
   main {
     margin-left: calc(250px + 2em);
-    /* to offset the fixed header */
+  }
+}
+
+/* this is to here to better fill the blank space on extra wide monitors, activates at 130px wide and spaces tweets off of the header */
+@media only screen and (min-width: 1320px) {
+  main {
+    margin-left: calc(250px + 2em + ((100vw - 1320px) * 0.5));
   }
 }
