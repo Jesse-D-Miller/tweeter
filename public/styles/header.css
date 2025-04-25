@@ -28,6 +28,14 @@
   .header {
     padding-top: 100px;
   }
+
+}
+
+/* this is messy but I was having an issue with this between 767 and 768px so i had to add 1 more pixel than the above*/
+@media only screen and (max-width: 768px) {
+  img#bob {
+    display: none;
+  }
 }
 
 /* tablet styles and desktop*/
@@ -43,5 +51,18 @@
     overflow-y: auto;
     box-sizing: border-box;
     border-radius: 0.75em;
+  }
+
+  img#bob {
+    opacity: 0;
+    width: auto;
+    height: 300px;
+    position: fixed;
+    left: 50px;
+    top: 300px;
+  }
+
+  header:active #bob {
+    opacity: 1;
   }
 }

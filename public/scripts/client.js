@@ -11,25 +11,22 @@ $(document).ready(() => {
   $("#new-tweet-form").submit((event) => {
 
     //prevents full page reload
-    event.preventDefault()
+    event.preventDefault();
 
     //saves the tweet (serialised) into a variable
     const formData = $(event.target).serialize();
-
-    //tweet validation goes here. this function returns false if input is invalid and then terminates exicution of tweet without clearing the form
 
     if (!validateTweetInput()) {
       return;
     }
 
-    //idk what ajax does and how it invokes an implicit promise
-    //note: i kind of get this now
+    //ajax invokes an implicit promise for tweet submission without reload
     $.ajax({
       method: "POST",
       url: "/api/tweets",
       data: formData,
     })
-      //promise with a response from the server and a form reset or an error 
+      //promise with a response from the server and a form reset or an error
       .then((response) => {
         console.log("Server responded (POST):", response);
         // reset form
@@ -49,7 +46,7 @@ $(document).ready(() => {
       url: "/api/tweets",
       // data: user,
     })
-      //promise with a response from the server and a form reset or an error 
+      //promise with a response from the server and a form reset or an error
       .then((response) => {
         console.log("Server responded (GET):", response);
         // reset form
@@ -58,13 +55,13 @@ $(document).ready(() => {
       .catch((err) => {
         console.error("AJAX error:", err);
       });
-  }
+  };
 
   loadTweets();
 });
 
 //loops through tweets, calls createTweetElement for each tweet, takes return value and appends it to the tweets container
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
   //empty the container before appending
   $(".tweets-container").empty();
 
@@ -105,13 +102,11 @@ const createTweetElement = (tweet) => {
   $article.append($header, $p, $footer);
 
   return $article;
-}
+};
 
 const validateTweetInput = () => {
   const tweetContent = $('.new-tweet textarea').val().trim();
   const $error = $(".new-tweet .error-message");
-
-  // $error.slideUp();
 
   if (tweetContent.length > 140) {
     $error.slideUp(() => {
@@ -127,4 +122,4 @@ const validateTweetInput = () => {
     $error.slideUp();
   }
   return true;
-}
+};

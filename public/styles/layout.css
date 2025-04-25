@@ -40,7 +40,7 @@ main {
 /* small mobile screen styles */
 @media only screen and (max-width: 500px) {
   main {
-    padding: .25em;
+    padding: 0.25em;
   }
 }
 
@@ -57,7 +57,7 @@ main {
   }
 }
 
-/* this is to here to better fill the blank space on extra wide monitors, activates at 130px wide and spaces tweets off of the header */
+/* this is to here to better fill the blank space on extra wide monitors, activates at 1320px wide and spaces tweets off of the header */
 @media only screen and (min-width: 1320px) {
   main {
     margin-left: calc(250px + 2em + ((100vw - 1320px) * 0.5));

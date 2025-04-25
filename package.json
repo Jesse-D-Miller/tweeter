@@ -11,6 +11,7 @@
   "author": "Lighthouse Labs",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^2.2.0",
     "chance": "^1.1.12",
     "express": "^4.21.2"
   },

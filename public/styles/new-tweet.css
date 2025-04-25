@@ -59,6 +59,7 @@
   color: #FFFFFF;
   background-color: #4056A1;
   border: 1px solid #545149;
+  border-radius: 5px;
 }
 
 .new-tweet-form-submit button:hover {
