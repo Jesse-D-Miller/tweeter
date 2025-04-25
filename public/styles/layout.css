@@ -30,5 +30,25 @@ body {
 main {
   width: 90%;
   padding: 1em;
-  margin: 1em auto;
+  margin: 0 auto;
+}
+
+/* small mobile screen styles */
+@media only screen and (max-width: 500px) {
+  main {
+    padding: .25em; 
+  }
+}
+
+/* tablet styles and desktop*/
+@media only screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  } 
+
+  main {
+    margin-left: calc(250px + 2em); /* to offset the fixed header */
+  }
 }

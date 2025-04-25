@@ -17,7 +17,7 @@ $(document).ready(() => {
     const formData = $(event.target).serialize();
 
     //tweet validation goes here. this function returns false if input is invalid and then terminates exicution of tweet without clearing the form
-   
+
     if (!validateTweetInput()) {
       return;
     }
@@ -111,16 +111,20 @@ const validateTweetInput = () => {
   const tweetContent = $('.new-tweet textarea').val().trim();
   const $error = $(".new-tweet .error-message");
 
+  // $error.slideUp();
+
   if (tweetContent.length > 140) {
     $error.slideUp(() => {
-      $error.html('<i class="fa-solid fa-triangle-exclamation"></i> You have exceeded the character count <i class="fa-solid fa-triangle-exclamation"></i>').slideDown();
+      $error.html('<i class="fa-solid fa-triangle-exclamation"></i> Character Count Exceeded <i class="fa-solid fa-triangle-exclamation"></i>').slideDown();
     });
     return false;
   } else if (tweetContent === null || tweetContent === "") {
     $error.slideUp(() => {
-    $error.html('<i class="fa-solid fa-triangle-exclamation"></i> You cannot submit a blank tweet <i class="fa-solid fa-triangle-exclamation"></i>').slideDown();
+      $error.html('<i class="fa-solid fa-triangle-exclamation"></i> Field Cannot Be Blank <i class="fa-solid fa-triangle-exclamation"></i>').slideDown();
     });
     return false;
+  } else {
+    $error.slideUp();
   }
   return true;
 }

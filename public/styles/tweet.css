@@ -1,14 +1,13 @@
 article.tweet {
   margin: 0.5em 0;
   padding: 1em;
-  border: 4px solid #545149;
+  border: 0.2em solid #545149;
 }
 
 article.tweet:hover {
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 6px 6px 0px rgba(85, 131, 206, 0.386);
-  border-radius: 2px;
 }
 
 article.tweet header {
@@ -35,6 +34,10 @@ article.tweet header span.handle {
   font-size: smaller;
 }
 
+article.tweet p {
+  font-size: 0.75em;
+}
+
 article.tweet footer {
   border-top: solid #545149;
   font-size: small;
@@ -52,4 +55,12 @@ article.tweet footer div i {
 
 article.tweet footer div i:hover {
   color: goldenrod;
+}
+
+/* small mobile screen styles */
+@media only screen and (max-width: 500px) {
+  article.tweet {
+    width: 100%;
+    padding: 0.5em;
+  }
 }

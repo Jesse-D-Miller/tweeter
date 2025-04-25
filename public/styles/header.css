@@ -21,3 +21,26 @@
 .header-username {
   font-size: 1.5em;
 }
+
+
+/* mobile styles */
+@media only screen and (max-width: 767px) {
+  .header {
+    padding-top: 100px;
+  }
+}
+
+/* tablet styles and desktop*/
+@media only screen and (min-width: 768px) {
+  .header {
+    position: fixed;
+    top: 175px;
+    left: 1em;
+    width: 250px;
+    height: calc(100vh - 175px - 1em); /* full screen height minus top and bottom gaps */
+    padding-top: 24px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    border-radius: 0.75em;
+  }
+}

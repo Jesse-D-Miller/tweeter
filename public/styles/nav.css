@@ -4,6 +4,7 @@
   color:#FFFFFF;
   background-color: #4056A1; 
   padding: 0 1.5em;
+
   
   display: flex;
   align-items: center;
@@ -24,6 +25,36 @@
   align-items: center;
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px); 
+  }
+}
+
 .navbar-menu i {
+  animation: bounce 1.2s infinite ease-in-out;
+
   color: red;
+  padding: 0.2em 0;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 767px) {
+  .navbar {
+    background-color: #4057a100;
+
+    position: absolute;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar-menu span {
+    display: none;
+  }
+  .navbar-menu i {
+    font-size: 2em;
+  }
 }
