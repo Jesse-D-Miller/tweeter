@@ -16,7 +16,7 @@ Tweeter is a simple, single-page Twitter clone.
 
 !["Screenshot of an example tweet"](https://github.com/Jesse-D-Miller/tweeter/blob/master/docs/tweet.png)
 
-!["Screenshot of ganacci"](https://github.com/Jesse-D-Miller/tweeter/blob/master/docs/ganacci-punch.png)
+!["gif of ganacci"](https://github.com/Jesse-D-Miller/tweeter/blob/master/docs/ganacci-punch.gif)
 
 !["Screenshot of mobile device view"](https://github.com/Jesse-D-Miller/tweeter/blob/master/docs/mobile-view.png)
 
