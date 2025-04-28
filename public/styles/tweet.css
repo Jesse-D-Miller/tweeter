@@ -2,6 +2,8 @@ article.tweet {
   margin: 0.5em 0;
   padding: 1em;
   border: 0.2em solid #545149;
+  width: 100%;
+  max-width: 100%;
 }
 
 article.tweet:hover {
@@ -36,6 +38,9 @@ article.tweet header span.handle {
 
 article.tweet p {
   font-size: 0.75em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 article.tweet footer {

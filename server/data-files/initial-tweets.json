@@ -6,7 +6,7 @@
       "handle": "@SirIsaac"
     },
     "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "If I have seen further it is by standing on the shoulders of giants."
     },
     "created_at": 1736200735747
   },
@@ -17,8 +17,261 @@
       "handle": "@rd"
     },
     "content": {
-      "text": "Je pense , donc je suis"
+      "text": "Je pense, donc je suis."
     },
     "created_at": 1736287135747
+  },
+  {
+    "user": {
+      "name": "Ada Lovelace",
+      "avatars": "https://i.imgur.com/z5LNkkB.png",
+      "handle": "@AdaComputes"
+    },
+    "content": {
+      "text": "The Analytical Engine weaves algebraic patterns just as the Jacquard loom weaves flowers and leaves."
+    },
+    "created_at": 1736290000000
+  },
+  {
+    "user": {
+      "name": "Turing",
+      "avatars": "https://i.imgur.com/DVpDmdR.png",
+      "handle": "@AlanT"
+    },
+    "content": {
+      "text": "Sometimes it is the people no one imagines anything of who do the things that no one can imagine."
+    },
+    "created_at": 1736291000000
+  },
+  {
+    "user": {
+      "name": "Einstein",
+      "avatars": "https://i.imgur.com/5fUVPRP.png",
+      "handle": "@RelativityRules"
+    },
+    "content": {
+      "text": "Life is like riding a bicycle. To keep your balance, you must keep moving."
+    },
+    "created_at": 1736292000000
+  },
+  {
+    "user": {
+      "name": "Curie",
+      "avatars": "https://i.imgur.com/3GvwNBf.png",
+      "handle": "@MarieC"
+    },
+    "content": {
+      "text": "Nothing in life is to be feared, it is only to be understood."
+    },
+    "created_at": 1736293000000
+  },
+  {
+    "user": {
+      "name": "Tesla",
+      "avatars": "https://i.imgur.com/2WZtOD6.png",
+      "handle": "@NikolaT"
+    },
+    "content": {
+      "text": "The present is theirs; the future, for which I really worked, is mine."
+    },
+    "created_at": 1736294000000
+  },
+  {
+    "user": {
+      "name": "Socrates",
+      "avatars": "https://i.imgur.com/ilT4JDe.png",
+      "handle": "@TheOriginalPhilosopher"
+    },
+    "content": {
+      "text": "The only true wisdom is in knowing you know nothing."
+    },
+    "created_at": 1736295000000
+  },
+  {
+    "user": {
+      "name": "Plato",
+      "avatars": "https://i.imgur.com/5fUVPRP.png",
+      "handle": "@AcademyMaster"
+    },
+    "content": {
+      "text": "We can easily forgive a child who is afraid of the dark; the real tragedy is when men are afraid of the light."
+    },
+    "created_at": 1736296000000
+  },
+  {
+    "user": {
+      "name": "Aristotle",
+      "avatars": "https://i.imgur.com/2WZtOD6.png",
+      "handle": "@GoldenMean"
+    },
+    "content": {
+      "text": "Quality is not an act, it is a habit."
+    },
+    "created_at": 1736297000000
+  },
+  {
+    "user": {
+      "name": "Galileo",
+      "avatars": "https://i.imgur.com/73hZDYK.png",
+      "handle": "@EarthMoves"
+    },
+    "content": {
+      "text": "E pur si muove."
+    },
+    "created_at": 1736298000000
+  },
+  {
+    "user": {
+      "name": "Darwin",
+      "avatars": "https://i.imgur.com/DVpDmdR.png",
+      "handle": "@NaturalSelect"
+    },
+    "content": {
+      "text": "It is not the strongest of the species that survives, nor the most intelligent, but the one most responsive to change."
+    },
+    "created_at": 1736299000000
+  },
+  {
+    "user": {
+      "name": "Hypatia",
+      "avatars": "https://i.imgur.com/v0JXau2.png",
+      "handle": "@AlexandriaScholar"
+    },
+    "content": {
+      "text": "Reserve your right to think, for even to think wrongly is better than not to think at all."
+    },
+    "created_at": 1736300000000
+  },
+  {
+    "user": {
+      "name": "Da Vinci",
+      "avatars": "https://i.imgur.com/5fUVPRP.png",
+      "handle": "@RenaissanceMan"
+    },
+    "content": {
+      "text": "Learning never exhausts the mind."
+    },
+    "created_at": 1736301000000
+  },
+  {
+    "user": {
+      "name": "Katherine Johnson",
+      "avatars": "https://i.imgur.com/3GvwNBf.png",
+      "handle": "@HiddenFigures"
+    },
+    "content": {
+      "text": "Girls are capable of doing everything men are capable of doing."
+    },
+    "created_at": 1736302000000
+  },
+  {
+    "user": {
+      "name": "Blaise Pascal",
+      "avatars": "https://i.imgur.com/2WZtOD6.png",
+      "handle": "@PascalTriangle"
+    },
+    "content": {
+      "text": "The heart has its reasons of which reason knows nothing."
+    },
+    "created_at": 1736303000000
+  },
+  {
+    "user": {
+      "name": "Alan Shepard",
+      "avatars": "https://i.imgur.com/ilT4JDe.png",
+      "handle": "@FirstAmericanSpace"
+    },
+    "content": {
+      "text": "It’s a very sobering feeling to realize your safety was determined by the lowest bidder."
+    },
+    "created_at": 1736304000000
+  },
+  {
+    "user": {
+      "name": "Sally Ride",
+      "avatars": "https://i.imgur.com/z5LNkkB.png",
+      "handle": "@FirstAmericanWoman"
+    },
+    "content": {
+      "text": "Science is fun. Science is curiosity. We all have natural curiosity."
+    },
+    "created_at": 1736305000000
+  },
+  {
+    "user": {
+      "name": "Neil Armstrong",
+      "avatars": "https://i.imgur.com/DVpDmdR.png",
+      "handle": "@OneSmallStep"
+    },
+    "content": {
+      "text": "That's one small step for man, one giant leap for mankind."
+    },
+    "created_at": 1736306000000
+  },
+  {
+    "user": {
+      "name": "Rosa Parks",
+      "avatars": "https://i.imgur.com/v0JXau2.png",
+      "handle": "@CivilRightsHero"
+    },
+    "content": {
+      "text": "You must never be fearful about what you are doing when it is right."
+    },
+    "created_at": 1736307000000
+  },
+  {
+    "user": {
+      "name": "Jane Goodall",
+      "avatars": "https://i.imgur.com/lRUnDgU.png",
+      "handle": "@ChimpanzeeWhisperer"
+    },
+    "content": {
+      "text": "The least I can do is speak out for those who cannot speak for themselves."
+    },
+    "created_at": 1736308000000
+  },
+  {
+    "user": {
+      "name": "Stephen Hawking",
+      "avatars": "https://i.imgur.com/5fUVPRP.png",
+      "handle": "@CosmicThinker"
+    },
+    "content": {
+      "text": "However difficult life may seem, there is always something you can do and succeed at."
+    },
+    "created_at": 1736309000000
+  },
+  {
+    "user": {
+      "name": "Malala Yousafzai",
+      "avatars": "https://i.imgur.com/3GvwNBf.png",
+      "handle": "@EducationHero"
+    },
+    "content": {
+      "text": "One child, one teacher, one book, one pen can change the world."
+    },
+    "created_at": 1736310000000
+  },
+  {
+    "user": {
+      "name": "Benjamin Franklin",
+      "avatars": "https://i.imgur.com/73hZDYK.png",
+      "handle": "@InventorAndThinker"
+    },
+    "content": {
+      "text": "An investment in knowledge pays the best interest."
+    },
+    "created_at": 1736311000000
+  },
+  {
+    "user": {
+      "name": "Confucius",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@WiseOldOne"
+    },
+    "content": {
+      "text": "It does not matter how slowly you go as long as you do not stop."
+    },
+    "created_at": 1736312000000
   }
 ]
